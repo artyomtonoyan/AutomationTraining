@@ -35,6 +35,8 @@ public class Login {
             System.out.println("Login Successful");
         } catch (Exception e) {
             System.out.println("Login Unsuccessful");
+        } finally {
+            driver.quit();
         }
     }
 
