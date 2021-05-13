@@ -20,6 +20,7 @@ public class Login {
 
     @AfterMethod
     public void quit(){
+        //In order to not quit fast
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
@@ -34,6 +35,7 @@ public class Login {
         loginPage.clickLoginLink();
         loginPage.typeUsername("testexplore");
         loginPage.typePassword("testexplore");
+        //Just for Recaptcha
         Thread.sleep(3000);
         loginPage.clickLoginButton();
         assertTrue(driver.getCurrentUrl().contains("/create"), "User was not logged in");
@@ -45,6 +47,7 @@ public class Login {
         loginPage.clickLoginLink();
         loginPage.typeUsername("testexplore");
         loginPage.typePassword("testexplore");
+        //Just for Recaptcha
         Thread.sleep(3000);
         loginPage.clickLoginButton();
 //        assertFalse(driver.getCurrentUrl().contains("/create"), "User logged in successfully");
